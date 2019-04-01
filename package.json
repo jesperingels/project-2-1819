@@ -4,7 +4,7 @@
   "description": "## Zoek in de de collectie van de OBA",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
     "compression": "^1.7.4",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "node-fetch": "^2.3.0",
+    "node-html-parser": "^1.1.13",
     "nodemon": "^1.18.10"
   }
 }
