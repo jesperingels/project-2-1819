@@ -1,0 +1,25 @@
+{
+  "name": "project-2-1819",
+  "version": "1.0.0",
+  "description": "## Zoek in de de collectie van de OBA",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesperingels/project-2-1819.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesperingels/project-2-1819/issues"
+  },
+  "homepage": "https://github.com/jesperingels/project-2-1819#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
