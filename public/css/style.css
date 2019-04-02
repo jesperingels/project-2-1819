@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 ul {
@@ -536,6 +537,53 @@ Globals
     }
 }
 
+
+/*
+Custom CSS
+*/
+
+.swiper-wrapper {
+    background-image: url(https://www.cmd-amsterdam.nl/wp-content/uploads/2018/11/header-cmd-3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide {
+    height: 400px;
+    display: flex;
+    text-align: right;
+}
+
+.nectar-slider-wrap,
+.swiper-container {
+    height: unset!important;
+}
+
+.col.span_6 {
+    float: left;
+    clear: both;
+    width: 45%;
+}
+
+.col.span_6 img {
+    width: 100%;
+    height: auto;
+}
+
+.col.span_6.col_last {
+    float: right;
+    width: 45%;
+    clear: unset;
+}
+
+#search-box,
+#search-outer {
+    display: none;
+}
+
+.sf-menu {
+    display: flex;
+}
 
 
 
