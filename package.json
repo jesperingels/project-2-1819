@@ -18,10 +18,12 @@
   "homepage": "https://github.com/jesperingels/project-2-1819#readme",
   "dependencies": {
     "compression": "^1.7.4",
+    "dom-parser": "^0.1.5",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "node-fetch": "^2.3.0",
     "node-html-parser": "^1.1.13",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "sanitize-html": "^1.20.0"
   }
 }

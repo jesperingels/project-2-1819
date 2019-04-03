@@ -1,6 +1,8 @@
 const express = require('express');
 const compression = require('compression');
 const ejs = require('ejs');
+const sanitizeHtml = require('sanitize-html');
+const DOMParser = require('dom-parser');
 const app = express();
 const parse = require('node-html-parser');
 const fetch = require('node-fetch');
@@ -42,11 +44,28 @@ app.get('/', async (req, res) => {
     // const x = temp.join('').replace("&nbsp;", "");
     // console.log('ik ben X!!! '+x);
 
+    // const dirtyHtml = wpData.content.rendered;
+    // const cleanHtml = sanitizeHtml(dirtyHtml, {
+    //     allowedTags: ['p', 'img'],
+    //     allowedAttributes: {
+    //         'a': [ 'href' ]
+    //     }
+    // });
 
 
+    const parser = new DOMParser();
+    // let cleanHtml = wpData.content.rendered.match('[full_width_section bg_pos=”Left Top” bg_repeat=”No-Repeat” text_color=”Dark” image_url=”” top_padding=”40″ bottom_padding=”40″ background_color=”#fff021″]');
 
+    let cleanHtml = wpData.content.rendered.replace('[full_width_section bg_pos=&#8221;Left Top&#8221; bg_repeat=&#8221;No-Repeat&#8221; text_color=&#8221;Dark&#8221; image_url=&#8221;&#8221; top_padding=&#8221;40&#8243; bottom_padding=&#8221;40&#8243; background_color=&#8221;#fff021&#8243;]', '');
+    cleanHtml = cleanHtml.replace('[/full_width_section]', '');
+
+
+    cleanHtml = parser.parseFromString(cleanHtml);
+
+
+    // console.log(cleanHtml);
     res.render('pages/index.ejs', {
-            html: wpData.content.rendered
+            html: cleanHtml.rawHTML
         })
 
     // res.send(wpData.content.rendered);
@@ -78,6 +97,8 @@ app.get('/', async (req, res) => {
     //         }
     //     })
     // })
+
+
 
 
 const api = {
