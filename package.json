@@ -4,7 +4,8 @@
   "description": "## Zoek in de de collectie van de OBA",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "prestart": "node tasks/imgmin.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,10 @@
     "dom-parser": "^0.1.5",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "imagemin": "^6.1.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "imagemin-webp": "^5.0.0",
     "node-fetch": "^2.3.0",
     "node-html-parser": "^1.1.13",
     "nodemon": "^1.18.10",
