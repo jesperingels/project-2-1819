@@ -1,7 +1,8 @@
 var CACHE_NAME = 'cmda-cache-v2';
 var CACHE_URLS = [
     '/',
-    'css/style.css'
+    'css/style.css',
+    'img/cmd_hva_logo_black-1.png'
 ];
 
 self.addEventListener('install', function(event) {
