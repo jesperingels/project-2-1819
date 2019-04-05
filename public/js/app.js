@@ -1,3 +1,4 @@
+// Register Service worker
 if("serviceWorker" in navigator){
     window.addEventListener("load",()=>{
         navigator.serviceWorker.register("service-worker.js").then(regis=>{
@@ -7,17 +8,22 @@ if("serviceWorker" in navigator){
     })
 }
 
+// Select existing images
 var imgList = document.querySelectorAll('.img-with-animation');
 var imgArr = Array.from(imgList);
 
+// Create Arrays with image source paths
 var webpArr = ['img/cmd_daantjebons_0007.webp', 'img/LR-deliverbee1.webp', 'img/cmd_daantjebons_0025-1.webp', 'img/battery-web.webp'];
 var jpgArr = ['img/cmd_daantjebons_0007.jpg', 'img/LR-deliverbee1.png', 'img/cmd_daantjebons_0025-1.jpg', 'img/battery-web.jpg'];
 
 
+// For each image, insert webp and fallback -> jpg/png
 for(let i = 0; i < webpArr.length; i ++) {
     var picture = document.createElement("picture");
     var source1 = document.createElement('source');
     var source2 = document.createElement('source');
+
+
 
     imgArr[i].src = jpgArr[i];
 
@@ -26,13 +32,19 @@ for(let i = 0; i < webpArr.length; i ++) {
     source2.srcset = jpgArr[i];
 
 
-    let parent = imgArr[i].parentElement;
+    var parent = imgArr[i].parentElement;
     parent.appendChild(picture);
     picture.appendChild(source1);
     picture.appendChild(source2);
 
     picture.appendChild(imgArr[i]);
 }
+
+
+
+
+
+
 
 
 

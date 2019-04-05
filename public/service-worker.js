@@ -1,8 +1,7 @@
 var CACHE_NAME = 'cmda-cache-v2';
 var CACHE_URLS = [
     '/',
-    'css/style.css',
-    'js/app.js'
+    'css/style.css'
 ];
 
 self.addEventListener('install', function(event) {

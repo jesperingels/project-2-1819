@@ -1,7 +1,7 @@
-@font-face {
-    font-family: "Open Sans";
-    src: url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
-}
+/*@font-face {*/
+    /*font-family: "Open Sans";*/
+    /*src: url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");*/
+/*}*/
 
 
 body {
@@ -44,6 +44,21 @@ a {
 /*
 Custom CSS
 */
+
+body > div:nth-child(7) .placeholder {
+    display: none;
+}
+
+.img-with-aniamtion-wrap {
+    z-index: 99;
+}
+
+.placeholder {
+    height: 313px;
+    width: 450px;
+    background: #e0e0e0;
+    position: absolute;
+}
 
 .swiper-wrapper {
     background-image: url('../img/header-img.jpg');
