@@ -29,7 +29,8 @@ zodat screenreaders de pagina beter kunnen begrijpen.
 ## Uitwerking
 Voor dit project heb ik me gefocust op de performance omdat hier het meest te verbeteren valt.
 Wat betreft de performance zijn de afbeeldingen de hoofdoorzaak van de langzame laadtijd. Hier
-heb ik me dus op gefocust.
+heb ik me dus op gefocust. Omdat de gehele website nabouwen in één week een beetje te veel werk is heb ik 
+ervoor gekozen om alleen de Homepage na te bouwen en te verbeteren. 
 
 ### Stap 1 - Server side 
 Aangezien het een wordpress website is en deze op php draaien is het natuurlijk al een server side website.
@@ -38,7 +39,16 @@ toepassen die ik in het vak 'Performance-Matters' aan bod zijn gekomen.
 
 #### Wordpress API
 Voor het renderen van de website waren er deze week twee keuzes:
-* Gebruik de Wordpress REST API  
+* Gebruik de Wordpress REST API om de html (van de live website) per pagina op te halen en deze te renderen op de NodeJS server.
+* Aangezien de HTML die uit de API komt niet helemaal schone HTML is leverde dit wat problemen op met het renderen van de HTML.
+Daarom hebben sommigen ervoor gekozen om de website met eigen HTML na te maken.
+
+Ik heb ervoor gekozen om de Wordpress API te gebruiken. Zo hoeft de klant zelf niks te veranderen aan zijn huidige werkwijze
+binnen de Wordpress omgeving.
+
+### Stap 2 - Styling
+Aangezien de originele stylesheet die wordt ingeladen ruim 700kb is en ruim 20.000 regels aan CSS bevat, heb ik besloten om een nieuw
+CSS bestand in te laden. Met "maar 300" regels CSS bereik ik hetzelfde resultaat met het laden van de Homepage.
 
 
 
