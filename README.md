@@ -1,4 +1,5 @@
 # Project 2 @cmda-minor-web-dev · 2018-2019
+[Demo](https://cmda.herokuapp.com/)
 
 ## Opdracht
 Verbeter de website van [CMD Amsterdam](https://www.cmd-amsterdam.nl/). Dit kan door bijvoorbeeld de Performance (Laadsnelheid) en Accessibility (toegankelijkheid) te verbeteren.
